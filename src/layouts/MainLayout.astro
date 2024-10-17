@@ -5,7 +5,7 @@
     interface Props{
         title: string
     }
-    const {title} = Astro.props
+    const {title} = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -16,9 +16,9 @@
     <ViewTransitions></ViewTransitions> 
     <title>{ title }</title>
 </head>
-<body>
-    <Header />
-    <main>
+<body class="bg-[#0d161c]">
+    <Header  />
+    <main class="">
         <slot></slot>
     </main>
 </body>

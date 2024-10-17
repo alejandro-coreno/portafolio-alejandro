@@ -2,6 +2,20 @@
 import Navbar from "./landing/Navbar";
 ---
 
-<header class="w-full h-screen">
+<header class="w-full h-screen border border-red-600 flex flex-col">
     <Navbar client:load/>
+
+    <div class="p-5 flex flex-col gap-5">
+        <div class="h-60 border border-blue-500 rounded">
+            <img src="" alt="">
+        </div>
+        
+        <div class="border py-1 px-2">
+            <p class="text-white text-justify font-medium">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum enim distinctio perspiciatis, ducimus nihil tempore illo veritatis, reprehenderit culpa eligendi esse, quisquam nostrum exercitationem architecto quae iure quidem odit aut?</p>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <button class="text-white bg-sky-800 p-4 rounded-md hover:bg-sky-500">Descargar CV</button>
+    </div>
 </header>
