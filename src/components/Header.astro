@@ -2,20 +2,21 @@
 import Navbar from "./landing/Navbar";
 ---
 
-<header class="w-full h-screen border border-red-600 flex flex-col">
+<header class="w-full h-screen flex flex-col sm:gap-7">
     <Navbar client:load/>
 
-    <div class="p-5 flex flex-col gap-5">
-        <div class="h-60 border border-blue-500 rounded">
+    <div class="p-6 flex flex-col gap-5 sm:flex-row">
+        <div class="h-60 border border-blue-500 rounded sm:flex-1">
             <img src="" alt="">
         </div>
         
-        <div class="border py-1 px-2">
+        <div class="p-4 sm:flex-1 flex flex-col border sm:justify-center sm:items-center">
+            <h1 class="text-white font-bold tracking-wide text-2xl text-center">Titulo</h1>
             <p class="text-white text-justify font-medium">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum enim distinctio perspiciatis, ducimus nihil tempore illo veritatis, reprehenderit culpa eligendi esse, quisquam nostrum exercitationem architecto quae iure quidem odit aut?</p>
         </div>
     </div>
 
-    <div class="text-center">
-        <button class="text-white bg-sky-800 p-4 rounded-md hover:bg-sky-500">Descargar CV</button>
+    <div class="text-center sm:text-right sm:pr-16">
+        <button class="text-white bg-sky-800 p-4 rounded-md hover:bg-sky-500 font-medium">Descargar CV</button>
     </div>
 </header>
