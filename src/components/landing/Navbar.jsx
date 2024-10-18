@@ -3,6 +3,13 @@ import iconMenu from "../../img/icon_menu.png"
 import iconCerrar from "../../img/icon_cancelar.png";
 import logo from "../../img/logo_react.webp";
 
+const enlaces = [ 
+    { title: "sobreMi"},
+    { title: "proyectos"},
+    { title: "tecnologias"},
+    { title: "contacto"} 
+]
+
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
@@ -21,7 +28,7 @@ const Navbar = () => {
                     <img src={logo.src} alt="" className='h-16 animate-pulse'/>
                 </div>
 
-                <div className='p-2 cursor-pointer sm:hidden'>
+                <div className='p-2 cursor-pointer sm:hidden mr-6'>
                     <img
                         className='h-8'
                         onClick={ handleClick }
@@ -33,14 +40,16 @@ const Navbar = () => {
 
             <div className={`bg-gradient-to-r from-[#0d161c] to-[#1e324d] p-6 duration-300 ease-in absolute top-[-400px] sm:top-0 sm:w-auto left-0 w-full sm:static sm:bg-none ${menuOpen && 'top-[80px] opacity-100'}`}>
                 <ul className='flex flex-col gap-5 sm:flex-row sm:gap-7'>
-                    <li className='text-white font-bold tracking-wide'><a href="#Contacto" onClick={ closeMenu}>Sobre Mi</a></li>
-                    <li className='text-white font-bold tracking-wide'><a href="#Tecnologias" onClick={ closeMenu}>Tecnologias</a></li>
-                    <li className='text-white font-bold tracking-wide'><a href="#Proyectos" onClick={ closeMenu}>Proyectos</a></li>
-                    <li className='text-white font-bold tracking-wide'><a href="#Contacto" onClick={ closeMenu}>Contacto</a></li>
+                    {enlaces.map((enlace, index) => (
+                        <li key={index} className='text-white font-extrabold tracking-wide'>
+                            <a href={`#${enlace.title}`} onClick={ closeMenu }>
+                                {enlace.title}
+                            </a>
+                        </li>
+                    ))}
                 </ul>
             </div>        
         </nav>
     );
 };
-
 export default Navbar;
