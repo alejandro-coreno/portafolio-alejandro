@@ -4,17 +4,25 @@ import Titulo from "./landing/Titulo.astro";
 
 ---
 
-<section id="Proyectos" class="border bg-[#0d161ce5] p-4 flex flex-col gap-5">
+<section id="Proyectos" class=" bg-gradient-to-b from-[#1e324d7f] to-[#0d161c ] p-4 flex flex-col gap-5">
 
     <Titulo>Proyectos</Titulo>
     
     <div class="grid grid-cols-1 gap-6">
         {
             proyectos.map((proyecto) => (
-                <div class="h-60 shadow-lg border border-blue-400 rounded-md text-white">
-                    <h2>{proyecto.title}</h2>
-                    <p>{proyecto.description}</p>
-                    <span>{proyecto.id}</span>
+                <div class="shadow-lg border-2 overflow-hidden relative group border-blue-950 bg-[#0d161c] rounded-md">
+                    <div class="border group-hover:grayscale">
+                        <img class="w-full h-full" src={proyecto.img} alt={proyecto.title} title={proyecto.title} />
+                    </div>
+
+                    <div class="w-full absolute border border-red-600 p-2 group-hover:-translate-y-28 duration-300 flex flex-col">
+                        <h2 class="text-xl text-blue-950 uppercase tracking-wide font-bold text-center">{proyecto.title}</h2>
+
+                        <div>
+                            iconos
+                        </div>
+                    </div>
                 </div>
             ))
         }

@@ -1,33 +1,29 @@
 export const proyectos = [
     {   
         id: 1,
-        title: "Proyecto1",
-        description: "",
-        img: "",
+        title: "Crud",
+        img: "/public/img/proyectos_image.png",
         iconGithub: "",
     },
 
     {   
         id: 2,
-        title: "Proyecto2",
-        description: "",
-        img: "",
+        title: "Listado de Tareas",
+        img: "/public/img/proyectos_image.png",
         iconGithub: "",
     },
 
     {   
         id: 3,
-        title: "Proyecto3",
-        description: "",
-        img: "",
+        title: "Carrito de compras",
+        img: "/public/img/proyectos_image.png",
         iconGithub: "",
     },
 
     {
         id: 4,
-        title: "Proyecto4",
-        description: "",
-        img: "",
+        title: "Galery App",
+        img: "/public/img/proyectos_image.png",
         iconGithub: "",
     },
 ]
