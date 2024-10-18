@@ -12,15 +12,18 @@ import Titulo from "./landing/Titulo.astro";
         {
             proyectos.map((proyecto) => (
                 <div class="shadow-lg border-2 overflow-hidden relative group border-blue-950 bg-[#0d161c] rounded-md">
-                    <div class="border group-hover:grayscale">
+                    <div class="group-hover:blur-sm">
                         <img class="w-full h-full" src={proyecto.img} alt={proyecto.title} title={proyecto.title} />
                     </div>
 
-                    <div class="w-full absolute border border-red-600 p-2 group-hover:-translate-y-28 duration-300 flex flex-col">
-                        <h2 class="text-xl text-blue-950 uppercase tracking-wide font-bold text-center">{proyecto.title}</h2>
+                    <div class="w-full h-full absolute bg-[#1e324d] p-2 group-hover:-translate-y-24 duration-300 flex gap-3 flex-col">
+                        <h2 class="text-xl text-white uppercase tracking-wide font-bold text-center">{proyecto.title}</h2>
 
-                        <div>
-                            iconos
+                        <div class="border flex justify-center gap">
+                            <img src={proyecto.iconGithub} alt="" />
+                            <img src={proyecto.iconGithub} alt="" />
+                            <img src={proyecto.iconGithub} alt="" />
+                            <img src={proyecto.iconGithub} alt="" />
                         </div>
                     </div>
                 </div>
