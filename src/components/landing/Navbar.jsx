@@ -4,10 +4,10 @@ import iconCerrar from "../../img/icon_cancelar.png";
 import logo from "../../img/logo_react.webp";
 
 const enlaces = [ 
-    { title: "sobreMi"},
-    { title: "proyectos"},
-    { title: "tecnologias"},
-    { title: "contacto"} 
+    { title: "SobreMi"},
+    { title: "Proyectos"},
+    { title: "Tecnologias"},
+    { title: "Contacto"} 
 ]
 
 const Navbar = () => {
