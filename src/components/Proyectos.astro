@@ -1,8 +1,8 @@
 ---
 import { proyectos } from "../data/proyectos";
 import Titulo from "./landing/Titulo.astro";
-
 ---
+
 
 <section id="Proyectos" class=" bg-gradient-to-b from-[#1e324d7f] to-[#0d161c ] p-4 flex flex-col gap-5">
 
@@ -16,14 +16,16 @@ import Titulo from "./landing/Titulo.astro";
                         <img class="w-full h-full" src={proyecto.img} alt={proyecto.title} title={proyecto.title} />
                     </div>
 
-                    <div class="w-full h-full absolute bg-[#1e324d] p-2 group-hover:-translate-y-24 duration-300 flex gap-3 flex-col">
+                    <div class="w-full h-full absolute bg-[#1e324d] group-hover:-translate-y-28 duration-300 pt-2 flex gap-3 flex-col">
                         <h2 class="text-xl text-white uppercase tracking-wide font-bold text-center">{proyecto.title}</h2>
-
-                        <div class="border flex justify-center gap">
-                            <img src={proyecto.iconGithub} alt="" />
-                            <img src={proyecto.iconGithub} alt="" />
-                            <img src={proyecto.iconGithub} alt="" />
-                            <img src={proyecto.iconGithub} alt="" />
+                        <div class="flex justify-around">
+                            {
+                                proyecto.icons && proyecto.icons.map((icono, index) => (
+                                    <img src={icono.icon} alt={`Icono de ${proyecto.title}`} />
+                                ))
+                            }
+                            <img src={proyecto.github}/>
+                            <button class="text-white font-bold tracking-wide uppercase sm:hidden">Demo</button>
                         </div>
                     </div>
                 </div>
