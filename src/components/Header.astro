@@ -1,13 +1,14 @@
 ---
 import Navbar from "./landing/Navbar";
+import coding_home from "../../public/img/coding_home.jpg";
 ---
 
 <header class="w-full flex flex-col sm:gap-7">
     <Navbar client:load/>
 
     <div class="p-6 flex flex-col gap-5 sm:flex-row">
-        <div class="h-60 border border-blue-500 rounded sm:flex-1">
-            <img src="" alt="">
+        <div class="sm:flex-1">
+            <img class="w-full h-full rounded-md shadow-lg" src={coding_home.src} alt="coding">
         </div>
         
         <div class="p-4 sm:flex-1 flex flex-col border sm:justify-center sm:items-center">

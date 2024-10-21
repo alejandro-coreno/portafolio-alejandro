@@ -10,22 +10,22 @@ import Titulo from "./landing/Titulo.astro";
     
     <div class="grid grid-cols-1 gap-6">
         {
-            proyectos.map((proyecto) => (
-                <div class="shadow-lg border-2 overflow-hidden relative group border-blue-950 bg-[#0d161c] rounded-md">
+            proyectos.map(({img, title, icons, github_icon, github_url, url_demo}) => (
+                <div class="shadow-lg border-2 overflow-hidden cursor-pointer relative group border-blue-950 bg-[#0d161c] rounded-md">
                     <div class="group-hover:blur-sm">
-                        <img class="w-full h-full" src={proyecto.img} alt={proyecto.title} title={proyecto.title} />
+                        <img class="w-full h-full" src={img} alt={title} title={title} />
                     </div>
 
                     <div class="w-full h-full absolute bg-[#1e324d] group-hover:-translate-y-28 duration-300 pt-2 flex gap-3 flex-col">
-                        <h2 class="text-xl text-white uppercase tracking-wide font-bold text-center">{proyecto.title}</h2>
-                        <div class="flex justify-around">
+                        <h2 class="text-xl text-white uppercase tracking-wider font-extrabold text-center">{title}</h2>
+                        <div class="flex justify-around items-center">
                             {
-                                proyecto.icons && proyecto.icons.map((icono, index) => (
-                                    <img src={icono.icon} alt={`Icono de ${proyecto.title}`} />
+                                icons && icons.map((icono, index) => (
+                                    <img src={icono.icon} alt={`Icono de ${title}`} />
                                 ))
                             }
-                            <img src={proyecto.github}/>
-                            <button class="text-white font-bold tracking-wide uppercase sm:hidden">Demo</button>
+                            <a href={github_url} target="_blank"><img src={github_icon}/></a>
+                            <a href={url_demo} target="_blank" class="text-white font-bold tracking-wide uppercase sm:hidden">Demo</a>
                         </div>
                     </div>
                 </div>
