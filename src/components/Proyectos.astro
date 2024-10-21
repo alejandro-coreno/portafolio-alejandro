@@ -3,14 +3,13 @@ import { proyectos } from "../data/proyectos";
 import Titulo from "./landing/Titulo.astro";
 ---
 
-
 <section id="Proyectos" class=" bg-gradient-to-b from-[#1e324d7f] to-[#0d161c ] p-4 flex flex-col gap-5">
 
     <Titulo>Proyectos</Titulo>
     
-    <div class="grid grid-cols-1 gap-6">
+    <div id="caja" class="grid grid-cols-1 gap-6">
         {
-            proyectos.map(({img, title, icons, github_icon, github_url, url_demo}) => (
+            proyectos.map(({ img, title, icons, github_icon, github_url, url_demo }) => (
                 <div class="shadow-lg border-2 overflow-hidden cursor-pointer relative group border-blue-950 bg-[#0d161c] rounded-md">
                     <div class="group-hover:blur-sm">
                         <img class="w-full h-full" src={img} alt={title} title={title} />
@@ -33,3 +32,19 @@ import Titulo from "./landing/Titulo.astro";
         }
     </div>
 </section>
+
+
+
+<script>
+    const caja = document.getElementById("caja");
+    
+    caja.addEventListener("click", () => {
+        const scrool = document.body.scrollWidth;
+        if (scrool > 640) {
+            console.log("REDIRIGIR")
+        }
+        else {
+            console.log("NO redirigir");
+        }
+    });
+</script>
