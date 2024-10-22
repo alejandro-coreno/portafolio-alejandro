@@ -1,3 +1,29 @@
-<footer>
-    
+---
+import Titulo from "./landing/Titulo.astro";
+import {contactos} from "../data/contactos";
+---
+
+<footer class="flex flex-col gap-2 p-4">
+    <Titulo>Contacto</Titulo>
+
+    <div class="p-3 flex flex-col gap-3">
+        {
+            contactos.map(({icono, nombre, descripcion}) => (
+                <div class="border border-blue-800 rounded-md flex p-3 gap-5 items-center">
+                    <div class="bg-[#1e324d] rounded-full p-3">
+                        <img class="w-9" src={icono} alt={nombre} />
+                    </div>
+
+                    <div class="text-white">
+                        <span class="tracking-wide font-bold">{nombre}</span>
+                        <p>{descripcion}</p>
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+
+    <div class="p-4 text-center">
+        <span class="text-white font-bold tracking-wide">© Alejandro Coreño | 2024 </span>
+    </div>
 </footer>

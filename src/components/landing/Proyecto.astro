@@ -1,0 +1,33 @@
+---
+    interface Props {
+        img: string;
+        title: string;
+        icons?: { icon: string }[];
+        github_url: string;
+        github_icon: string;
+        url_demo: string;
+    }
+
+    const { img, title, icons, github_icon, github_url, url_demo} = Astro.props;
+---
+
+<div class="shadow-lg border-2 overflow-hidden cursor-pointer relative group border-blue-950 bg-[#0d161c] rounded-md">
+    <div class="group-hover:blur-sm">
+        <img class="w-full h-full" src={img} alt={title} title={title} />
+    </div>
+    
+
+    <div class="w-full h-full absolute bg-[#1e324d] group-hover:-translate-y-28 duration-300 pt-2 flex gap-3 flex-col">
+        <h2 class="text-xl text-white uppercase tracking-wider font-extrabold text-center">{title}</h2>
+        <div class="flex justify-around items-center">
+            {
+                icons && icons.map(({icon}) => (
+                    <img src={icon} alt={`Icono de ${title}`} />
+                ))
+            }
+            <a href={github_url} target="_blank"><img src={github_icon}/></a>
+            <a href={url_demo} target="_blank" class="text-white font-bold tracking-wide uppercase sm:hidden">Demo</a>
+        </div>
+    </div>
+</div>
+

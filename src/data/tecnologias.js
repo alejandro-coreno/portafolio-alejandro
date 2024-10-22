@@ -1,16 +1,16 @@
 
 export const tecnologiasFront = [
-    {icon: "/public/img/icons/react.png"},
-    {icon: "/public/img/icons/javascript.png"},
-    {icon: "/public/img/icons/tailwind.png"},
-    {icon: "/public/img/icons/typescript.png"},
-    {icon: "/public/img/icons/angular.png"},
+    {icon: "/img/icons/react.png"},
+    {icon: "/img/icons/javascript.png"},
+    {icon: "/img/icons/tailwind.png"},
+    {icon: "/img/icons/typescript.png"},
+    {icon: "/img/icons/angular.png"},
 ]
 
 export const tecnologiasBack = [
-    {icon: "/public/img/icons/node.png"},
-    {icon: "/public/img/icons/mysql.png"},
-    {icon: "/public/img/icons/git.png"},
-    {icon: "/public/img/icons/firebase.png"},
-    {icon: "/public/img/icons/java.png"},
+    {icon: "/img/icons/node.png"},
+    {icon: "/img/icons/mysql.png"},
+    {icon: "/img/icons/git.png"},
+    {icon: "/img/icons/firebase.png"},
+    {icon: "/img/icons/java.png"},
 ]

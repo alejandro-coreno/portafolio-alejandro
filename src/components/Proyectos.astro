@@ -1,6 +1,7 @@
 ---
 import { proyectos } from "../data/proyectos";
 import Titulo from "./landing/Titulo.astro";
+import Proyecto from "./landing/Proyecto.astro";
 ---
 
 <section id="Proyectos" class=" bg-gradient-to-b from-[#1e324d7f] to-[#0d161c ] p-4 flex flex-col gap-5">
@@ -10,41 +11,15 @@ import Titulo from "./landing/Titulo.astro";
     <div id="caja" class="grid grid-cols-1 gap-6">
         {
             proyectos.map(({ img, title, icons, github_icon, github_url, url_demo }) => (
-                <div class="shadow-lg border-2 overflow-hidden cursor-pointer relative group border-blue-950 bg-[#0d161c] rounded-md">
-                    <div class="group-hover:blur-sm">
-                        <img class="w-full h-full" src={img} alt={title} title={title} />
-                    </div>
-
-                    <div class="w-full h-full absolute bg-[#1e324d] group-hover:-translate-y-28 duration-300 pt-2 flex gap-3 flex-col">
-                        <h2 class="text-xl text-white uppercase tracking-wider font-extrabold text-center">{title}</h2>
-                        <div class="flex justify-around items-center">
-                            {
-                                icons && icons.map((icono, index) => (
-                                    <img src={icono.icon} alt={`Icono de ${title}`} />
-                                ))
-                            }
-                            <a href={github_url} target="_blank"><img src={github_icon}/></a>
-                            <a href={url_demo} target="_blank" class="text-white font-bold tracking-wide uppercase sm:hidden">Demo</a>
-                        </div>
-                    </div>
-                </div>
+                <Proyecto 
+                    img={img}
+                    title={title}
+                    icons={icons}
+                    github_icon={github_icon}
+                    github_url={github_url}
+                    url_demo={url_demo} 
+                />
             ))
         }
     </div>
 </section>
-
-
-
-<script>
-    const caja = document.getElementById("caja");
-    
-    caja.addEventListener("click", () => {
-        const scrool = document.body.scrollWidth;
-        if (scrool > 640) {
-            console.log("REDIRIGIR")
-        }
-        else {
-            console.log("NO redirigir");
-        }
-    });
-</script>
