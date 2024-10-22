@@ -4,11 +4,11 @@ import Titulo from "./landing/Titulo.astro";
 import Proyecto from "./landing/Proyecto.astro";
 ---
 
-<section id="Proyectos" class=" bg-gradient-to-b from-[#1e324d7f] to-[#0d161c ] p-4 flex flex-col gap-5">
+<section id="Proyectos" class=" bg-gradient-to-b from-[#1e324d7f] to-[#0d161c ] p-4 flex flex-col gap-5 md:p-6">
 
     <Titulo>Proyectos</Titulo>
     
-    <div id="caja" class="grid grid-cols-1 gap-6">
+    <div id="caja" class="grid grid-cols-1 gap-6 md:grid-cols-2">
         {
             proyectos.map(({ img, title, icons, github_icon, github_url, url_demo }) => (
                 <Proyecto 
