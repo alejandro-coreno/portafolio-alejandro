@@ -16,7 +16,7 @@ export const proyectos = [
     {   
         id: 2,
         title: "Listado de Tareas",
-        img: "/img/1.png",
+        img: "/img/lista_tareas.png",
         github_icon: "/img/icons/github.png",
         github_url: "https://github.com/alejandro-coreno/Todo-List",
         url_demo: "https://todo-list-tareas.netlify.app/",
