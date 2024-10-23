@@ -4,7 +4,7 @@ import iconCerrar from "../../img/icon_cancelar.png";
 import logo from "../../img/logo_react.webp";
 
 const enlaces = [ 
-    { title: "Sobre Mi"},
+    { title: "Acerca de Mi"},
     { title: "Proyectos"},
     { title: "Skills"},
     { title: "Contacto"} 
@@ -22,7 +22,7 @@ const Navbar = () => {
     }
 
     return (
-        <nav className="bg-gradient-to-r from-[#0d161c] to-[#1e324d] shadow-2xl sm:flex justify-between items-center py-5 sm:px-28">
+        <nav className="bg-gradient-to-r from-[#0d161c] to-[#1e324d] shadow-2xl sm:flex justify-between items-center py-5 sm:px-36">
             <div className="flex items-center justify-between px-3">
                 <div className="cursor-pointer ml-4">
                     <img src={logo.src} alt="" className='h-16 animate-pulse'/>
