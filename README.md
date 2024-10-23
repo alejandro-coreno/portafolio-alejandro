@@ -1,6 +1,8 @@
+
 ## 🚀 Proyecto Portafolio Alejandro Coreño
 
-### Desarollado con Astro y Tailwind CSS
+### Desarollado con las tecnologías Astro , Tailwind CSS y React JS
 
 ### Cuenta con responsive desing
+
 

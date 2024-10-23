@@ -6,7 +6,7 @@ import logo from "../../img/logo_react.webp";
 const enlaces = [ 
     { title: "SobreMi"},
     { title: "Proyectos"},
-    { title: "Tecnologias"},
+    { title: "Skills"},
     { title: "Contacto"} 
 ]
 

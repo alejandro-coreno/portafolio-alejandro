@@ -11,13 +11,13 @@
     const { img, title, icons, github_icon, github_url, url_demo} = Astro.props;
 ---
 
-<div class="shadow-lg border-2 overflow-hidden cursor-pointer relative group border-blue-950 bg-[#0d161c] rounded-md">
+<div class="shadow-lg border-2 overflow-hidden cursor-pointer relative group border-blue-950 bg-[#0d161c] rounded-lg">
     <div class="group-hover:blur-sm">
         <img class="w-full h-full" src={img} alt={title} title={title} />
     </div>
     
 
-    <div class="w-full h-[40%] absolute bg-[#1e324d] group-hover:-translate-y-32 duration-300 pt-2 flex flex-col justify-center items-center gap-3">
+    <div class="w-full h-[40%] absolute bg-[#1e324d] group-hover:-translate-y-32 duration-300 flex flex-col justify-center items-center gap-3">
         <h3 class="text-xl text-white uppercase tracking-wider font-extrabold text-center">{title}</h3>
         <div class="w-full flex justify-around items-center">
             {
