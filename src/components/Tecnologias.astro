@@ -7,29 +7,29 @@ import Titulo from "./landing/Titulo.astro";
     <Titulo>Skills</Titulo>
 
     <div class="flex flex-col sm:flex-row sm:gap-5 sm:p-6">
-        <div class="h-60 border-gray-600 border flex flex-col gap-3 py-4 px-3 sm:flex-1">
+        <div class="h-60 border-gray-600 rounded-md border flex flex-col gap-3 py-4 px-3 sm:flex-1">
             <div class="flex flex-col gap-2">
-                <h2 class="text-white tracking-wide font-bold">FrontEnd</h2>
+                <h2 class="text-white tracking-wide font-bold text-center">FrontEnd</h2>
                 <hr class="border border-blue-800" />
             </div>
     
             <div class="h-full flex justify-center items-center gap-8 flex-wrap">
-                { tecnologiasFront.map(({icon}) => (
-                    <img class="drop-shadow-xl w-9" src={icon} />
+                { tecnologiasFront.map(({icon, nombre}) => (
+                    <img class="hover:filter hover:drop-shadow-[2px_2px_15px_white] w-9" src={icon} alt={nombre} title={nombre} />
                 ))}
             </div>
         </div>
     
-        <div class="h-60 border-gray-600 border py-4 px-3 sm:flex-1">
+        <div class="h-60 border-gray-600 rounded-md border py-4 px-3 sm:flex-1">
     
             <div class="flex flex-col gap-2">
-                <h2 class="text-white tracking-wide font-bold">Backend</h2>
+                <h2 class="text-white tracking-wide font-bold text-center">Backend</h2>
                 <hr class="border border-blue-800" />
             </div>
     
             <div class="h-full flex justify-center items-center gap-8 flex-wrap">
-                { tecnologiasBack.map(({icon}) => (
-                    <img class="drop-shadow-xl w-9" src={icon} />
+                { tecnologiasBack.map(({icon, nombre}) => (
+                    <img class="hover:filter hover:drop-shadow-[2px_2px_15px_white] w-9" src={icon} alt={nombre} title={nombre} />
                 ))}
             </div>
         </div>

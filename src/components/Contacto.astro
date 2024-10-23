@@ -8,11 +8,11 @@ import {contactos} from "../data/contactos";
 
     <div class="p-4 grid grid-cols-1 gap-6 sm:grid-cols-2">
         {
-            contactos.map(({icono, nombre, descripcion}) => (
+            contactos.map(({icono, nombre, descripcion, url}) => (
                 <div class="border border-blue-800 rounded-md flex p-3 gap-5 items-center">
-                    <div class="bg-[#1e324d] rounded-full p-3">
+                    <a href={url} download={nombre === "CV" ? "Alejandro_CV.pdf" : null} target="_blank" class="bg-[#1e324d] hover:bg-blue-800 duration-200 animate-pulse rounded-full p-3 cursor-pointer">
                         <img class="w-9" src={icono} alt={nombre} />
-                    </div>
+                    </a>
 
                     <div class="text-white">
                         <span class="tracking-wide font-bold">{nombre}</span>
@@ -27,3 +27,4 @@ import {contactos} from "../data/contactos";
         <span class="text-white font-bold tracking-wide">© Alejandro Coreño | 2024 </span>
     </div>
 </footer>
+
