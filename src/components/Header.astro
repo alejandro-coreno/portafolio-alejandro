@@ -2,6 +2,7 @@
 import Navbar from "./landing/Navbar";
 import coding_home from "/public/img/coding_home.jpg";
 import saludoIcon from "/public/img/icons/saludo.png";
+
 ---
 
 <header class="w-full flex flex-col sm:gap-7 header">
@@ -14,7 +15,7 @@ import saludoIcon from "/public/img/icons/saludo.png";
         
         <div class="p-4 sm:flex-1 flex gap-3 flex-col sm:justify-center sm:items-center">
             <div class="flex justify-center gap-2 items-center">
-                <h1 class="text-sky-500 font-bold tracking-wide sm:text-2xl text-center">¡Hola, Soy Alejandro Coreño!</h1>
+                <h1 class="text-sky-500 font-bold tracking-wide sm:text-2xl text-center animate">¡Hola, Soy Alejandro Coreño!</h1>
                 <img class="w-9 p-1" src={saludoIcon.src} title="saludo" alt="saludo">
             </div>
             <p class="text-white text-justify">Desarrollador web, estoy enfocado principalmente en <span class="font-bold">Frontend</span>, también tengo experiencia en <span class="font-bold">Backend</span> lo cual me ha permitido desarrollar proyectos laborales y personales.<p>
@@ -28,4 +29,31 @@ import saludoIcon from "/public/img/icons/saludo.png";
         </a>
     </div>
 </header>
+
+
+<style>
+   
+   .animate {
+        display: inline-block; 
+        white-space: nowrap; 
+        overflow: hidden; 
+        border-right: 3px solid blue;
+        animation: escritura 4s steps(28) forwards; 
+    }
+
+    
+    @keyframes escritura {
+        0% {
+            width: 0;
+        }
+        99% {
+            width: 100%; 
+        }
+        100% {
+            width: 100%;
+            border-right: 2px solid transparent;
+        }
+    }
+</style>
+
 
