@@ -1,9 +1,10 @@
 ---
 import Navbar from "./landing/Navbar";
-import coding_home from "../../public/img/coding_home.jpg";
+import coding_home from "/public/img/coding_home.jpg";
+import saludoIcon from "/public/img/icons/saludo.png";
 ---
 
-<header class="w-full flex flex-col sm:gap-7">
+<header class="w-full flex flex-col sm:gap-7 header">
     <Navbar client:load/>
 
     <div class="p-6 flex flex-col gap-5 sm:flex-row">
@@ -11,9 +12,12 @@ import coding_home from "../../public/img/coding_home.jpg";
             <img class="w-full h-full rounded-md shadow-lg" src={coding_home.src} alt="coding">
         </div>
         
-        <div class="p-4 sm:flex-1 flex flex-col border sm:justify-center sm:items-center">
-            <h1 class="text-white font-bold tracking-wide text-2xl text-center">Titulo</h1>
-            <p class="text-white text-justify font-medium">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum enim distinctio perspiciatis, ducimus nihil tempore illo veritatis, reprehenderit culpa eligendi esse, quisquam nostrum exercitationem architecto quae iure quidem odit aut?</p>
+        <div class="p-4 sm:flex-1 flex gap-3 flex-col border sm:justify-center sm:items-center">
+            <div class="flex justify-center gap-2 border items-center">
+                <h1 class="text-white font-bold tracking-wide sm:text-2xl text-center">¡Hola, Soy Alejandro Coreño!</h1>
+                <img class="w-9 p-1" src={saludoIcon.src} title="saludo" alt="saludo">
+            </div>
+            <p class="text-white text-justify">Desarrollador web, estoy enfocado en el <span class="font-bold">Frontend</span>, también tengo un poco de experiecia en el <span class="font-bold">Backend</span> lo cual me ha permitido desarrollar proyectos laborales y personales. Te invito a conocer mi portafolio y que puedas conocer mi trabajo.<p>
         </div>
     </div>
 
@@ -23,3 +27,4 @@ import coding_home from "../../public/img/coding_home.jpg";
         </a>
     </div>
 </header>
+
