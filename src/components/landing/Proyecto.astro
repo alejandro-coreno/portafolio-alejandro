@@ -17,8 +17,8 @@
         <img class="w-full h-full" src={img} alt={title} title={title} />
     </div>
     
-    <div class="w-full h-[45%] absolute bg-[#1e324d] group-hover:-translate-y-32 duration-300 flex flex-col justify-center items-center gap-3">
-        <h3 class="text-xl text-white uppercase tracking-wider font-extrabold text-center">{title}</h3>
+    <div class="w-full h-[45%] absolute bg-[#1e324d] group-hover:-translate-y-20 sm:group-hover:-translate-y-32 duration-300 flex flex-col justify-center items-center gap-3">
+        <h3 class="sm:text-xl text-sm text-white uppercase tracking-wider font-extrabold text-center">{title}</h3>
         <div class="w-full flex justify-around items-center">
             {
                 icons && icons.map(({icon}) => (
@@ -26,7 +26,7 @@
                 ))
             }
             <a href={github_url} target="_blank"><img src={github_icon}/></a>
-            <a href={url_demo} target="_blank" class="text-white font-bold tracking-wide uppercase">Demo</a>
+            <a href={url_demo} target="_blank" class="text-white font-bold tracking-wide uppercase text-sm sm:text-xl">Demo</a>
         </div>
     </div>
 </div>
