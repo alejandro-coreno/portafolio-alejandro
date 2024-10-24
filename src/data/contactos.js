@@ -7,7 +7,7 @@ export const contactos = [
     },
     {
         nombre: "Correo",
-        descripcion: "alejandrocoreno@outlook.com",
+        descripcion: "alejandrocoreno @outlook.com",
         icono: "/img/icons/correo.png",
         url: "mailto:alejandrocoreno@outlook.com"
     },

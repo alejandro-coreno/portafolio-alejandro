@@ -1,12 +1,5 @@
----
-interface Props {
-    indent?: string;
-    texto?: string
-}
 
-const { indent, texto} = Astro.props;
----
 
-<h1 class=`text-white font-bold tracking-wide text-3xl text-center sm:${indent} sm:${texto}`>
+<h2 class=`text-white font-bold tracking-wide text-3xl text-center`>
     <slot />
-</h1>
+</h2>
