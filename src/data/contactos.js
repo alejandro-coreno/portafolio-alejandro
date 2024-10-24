@@ -36,6 +36,6 @@ export const contactos = [
         nombre: "CV",
         descripcion: "Descargar",
         icono: "/img/icons/cv.png",
-        url:"/Alejandro_CV.pdf"
+        url:"/Josue_Alejandro_CV.pdf"
     },
 ]
